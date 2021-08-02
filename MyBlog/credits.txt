@@ -1,0 +1,3 @@
+﻿https://blog.ladeak.net/posts/blazor-code-highlight
+https://www.meziantou.net/publishing-a-blazor-webassembly-application-to-github-pages.htm
+https://www.meziantou.net/debouncing-throttling-javascript-events-in-a-blazor-application.htm

@@ -1,0 +1,29 @@
+﻿@using MyBlog.Core
+@if (!string.IsNullOrEmpty(SearchKeyword))
+{
+    <Dropdown Visible=@(!string.IsNullOrEmpty(SearchKeyword))>
+        <DropdownMenu Style="padding:3px">
+            @if (FoundItems != null)
+            {
+                if (FoundItems.Any())
+                {
+                    @foreach (var item in FoundItems)
+                    {
+                        <DropdownItem Clicked="@(() => GotoEntry(@item.git_url, @item.path))">@item.name</DropdownItem>
+                    }
+                    @if ((From + 5) < TotalItems)
+                    {
+                        <DropdownDivider />
+                        <DropdownItem>More...</DropdownItem>
+                    }
+                }
+                else
+                {
+                    <h6>No items found</h6>
+                }
+            }
+
+        </DropdownMenu>
+
+    </Dropdown>
+}

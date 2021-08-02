@@ -1,0 +1,22 @@
+@if (CommitInfo != null)
+{
+    <div class="card"
+     style="margin-bottom:3px">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-4"><label>Author:&nbsp;</label><strong>@CommitInfo.commit.author.name</strong></div>
+                <div class="col-4"><label>Last Update:&nbsp;</label><strong>@CommitInfo.commit.committer.date.Value.ToShortDateString()</strong></div>
+                <div class="col-4"><label>File:&nbsp;</label><strong>@Path</strong></div>
+            </div>
+        </div>
+        <div class="card-body">
+            @HtmlContent
+        </div>
+        @if (ExcerptView)
+        {
+            <div class="card-footer">
+                <a class="btn btn-secondary" href="@GetNavigationUrl()" role="button">Read More</a>
+            </div>
+        }
+    </div>
+}

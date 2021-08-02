@@ -1,0 +1,7 @@
+﻿@if (Entries != null)
+{
+    @foreach (var entry in Entries)
+    {
+        <EntryComponent Path=@entry.path GitUrl=@entry.git_url ExcerptView=true></EntryComponent>
+    }
+}

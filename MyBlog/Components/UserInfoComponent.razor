@@ -1,0 +1,22 @@
+﻿@if (UserInfo != null)
+{
+    <div class="row">
+        @if (ShowAvatar)
+        {
+            <div class="col-4" style="text-align:right">
+                <img src="@UserInfo.avatar_url" class="avatar" />
+            </div>
+        }
+        @if (ShowDetails)
+        {
+            <div class="col-8">
+                <h2>Welcome to <strong>@(UserInfo.name)'s blog!</strong></h2>
+                <h5>@UserInfo.bio</h5>
+                <i class="fas fa-map-marker-alt" style="display:inline-block"/>&nbsp;
+                <h6 style="display:inline-block">@UserInfo.location</h6> - 
+                <i class="fas fa-link" style="display:inline-block"/>&nbsp;
+                <h6 style="display:inline-block">@UserInfo.blog</h6>
+            </div>
+        }
+    </div>
+}
